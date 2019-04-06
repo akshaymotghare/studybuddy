@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script type="text/javascript">
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDa9XK3-ytiEYodXnUZ65AJheNm7hy4Wfo",
+    authDomain: "studybuddy-91418.firebaseapp.com",
+    databaseURL: "https://studybuddy-91418.firebaseio.com",
+    projectId: "studybuddy-91418",
+    storageBucket: "studybuddy-91418.appspot.com",
+    messagingSenderId: "620271151536"
+  };
+  firebase.initializeApp(config);
+
+  firebase.auth().onAuthStateChanged(firebaseUser =>{
+  	if (firebaseUser) {
+  		window.location = 'main.html';
+  	}
+  	else {
+  		console.log('User not login');
+  	}
+  });
+</script>
+<meta charset="UTF-8">
+
+<base target="_blank">
+	<title>Study Buddy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+    <!-- Top  Menu 
+<div class="container ui">
+<div class="ui   massive menu ">
+  <a class="active item">
+    Home
+  </a>
+
+  <div class="right menu">
+ 
+    <div class="item">
+        <div class="ui primary button">Sign Up</div>
+    </div>
+  </div>
+</div>
+</div>
+
+-->
+
+    <!-- Top Fixed Hidden Menu 
+<div class="ui massive top fixed menu hideit">
+    <div class="ui container">
+      
+        <div class="right menu">
+            <div class="item">
+                <a class="ui teal button login_trigger">Log in</a>
+            </div>
+            <div class="item">
+                <a class="ui teal button signup_trigger">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+-->
+
+
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+  <div class="ui container">
+
+      <div class="item"><img src="images/sb_logo.png"  width="200" alt="eGyan" class="ui" /></div>
+    <div class="right menu">
+      <div class="item">
+        <a id="login" class="ui button blue-grey login_trigger">Log in</a>
+        <a id="signup" class="ui blue inverted  signup_trigger ">Signup</a>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Page Contents -->
+<div class="pusher">
+  <div class="ui inverted vertical masthead center aligned segment">
+
+    <div class="ui container">
+      <div class="ui large secondary pointing menu">
+        <a class="toc item">
+          <i class="sidebar icon"></i>
+        </a>
+        <div class="item"><img src="images/sb_logo.png"  width="200"  alt="eGyan" class="ui" /></div>
+        
+        <div class="right item">
+          <a id="login" class="ui blue inverted login_trigger  button">Log in</a>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+      	Online Used Book Store
+      </h1>
+      	<br>
+      	<br>
+      <h2>Free study material,notes, question papers, books etc Signup to get started</h2>
+      <div id="signup" class="ui signup_trigger huge primary button">Signup with email <i class="right arrow icon"></i></div>
+      <div id="signup_m" class="ui signupm_trigger huge primary button">Signup with Phone<i class="right mobile icon"></i> </div>
+    </div>
+
+  </div>
+
+
+
+  <h3 align="center" style="position: relative;">Latest News from Dot:</h3>
+
+<div style="width:470px;
+height:269px;
+overflow:hidden;
+position:relative;" class="ui segment container ui">
+  <div id="newsload" class="ui active loader "></div>
+  <p></p>
+
+   <div id='outerdiv' class="container ui">
+
+<iframe  onload="onLoadHandler();" src="redirect.html" id='inneriframe' scrolling=no></iframe>
+</div>
+</div>
+
+
+
+<div style="padding-top: 20px" class="ui"></div>
+
+
+
+  <!-- Footer -->
+    <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+            <div class="ui inverted stackable grid">
+                <div class="seven wide column">
+                    <h4 class="ui inverted ">&copy;2018 Study Buddy</h4>
+                   
+                </div>
+<div class="ui inverted stackable grid">
+                
+                   
+                    <p align="center"><a href="" target="_blank" class="ui basic orange label" id="platform_link">About Us</a></p>
+               
+            </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--Modal-->
+<div class="ui basic small modal login_modal">
+    <i class="close icon"></i>
+    <div class="ui center aligned large header"> LOGIN</div>
+    <div class="content">
+        <div class="ui middle aligned grid">
+            <div class="column">
+                <form class="ui form" id="login_form">
+                    <div class="ui stacked segment">
+                        <div class="field">
+                            <label>Email</label>
+                            <div class="ui left icon input">
+                                <i class="mail icon"></i>
+                                <input id="emailo" type="text" name="email" placeholder="E-mail address">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Password</label>
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input id="passwordo" type="password" name="password" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="ui large teal submit flat button" id="login_btn">LOGIN</div>
+                        <div  id="passwordf" class="ui teal flat button" id="submit">Forget password</div>
+                        <div class="main_loader" id="login_loader">
+                            <div class="ui active inline loader"></div>
+                            <div class="loader_text">Logging in...</div>
+                        </div>
+                    </div>
+                    <div class="ui error message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> 
+<div class="ui basic small modal signup_modal">
+    <i class="close icon"></i>
+    <div class="ui center aligned large header">SIGN UP</div>
+    <div class="content">
+        <div class="ui middle aligned grid">
+            <div class="column">
+                <form class="ui form" id="signup_form">
+                    <div class="ui stacked segment">
+                        
+                        <div class="field">
+                            <label>Email</label>
+                            <div class="ui left icon input">
+                                <i class="mail icon"></i>
+                                <input id="email_val" type="text" name="email" placeholder="E-mail address">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Password</label>
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input id="passw" type="password" name="password" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="ui large teal submit flat button" id="signup_btn">SIGN UP</div>
+                        <div class="main_loader" id="signup_loader">
+                            <div class="ui active inline loader"></div>
+                            <div class="loader_text">Registering...</div>
+                        </div>
+                    </div>
+                    <div class="ui error message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ui basic small modal password_modal">
+    <i class="close icon"></i>
+    <div class="ui center aligned large header">Forget Password</div>
+    <div class="content">
+        <div class="ui middle aligned grid">
+            <div class="column">
+                <form class="ui form" id="password_form">
+                    <div class="ui stacked segment">
+                        
+                        <div class="field">
+                            <label>Email</label>
+                            <div class="ui left icon input">
+                                <i class="mail icon"></i>
+                                <input id="emailp" type="text" name="email" placeholder="E-mail address">
+                            </div>
+                        </div>
+                        
+                         <div class="ui large teal submit flat button" id="password_btn">Submit</div>
+                        <div class="main_loader" id="signup_loader">
+                            <div class="ui active inline loader"></div>
+                            <div class="loader_text">Registering...</div>
+                        </div>
+                    </div>
+                    <div class="ui error message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ui basic small modal reset_modal">
+    <i class="close icon"></i>
+    <div class="ui center aligned large header">Reset Password</div>
+    <div class="content">
+        <div class="ui middle aligned grid">
+            <div class="column">
+                <form class="ui form" id="reset_form">
+                    <div class="ui stacked segment">
+                        <div i></div>
+                        <div class="field">
+                            <label>Enter new Password</label>
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="password" name="password" id="pass" placeholder="Password">
+                            </div>
+                        </div>
+                        
+                         <div class="ui large teal submit flat button" id="reset_btn">Reset Password</div>
+                        <div class="main_loader" id="signup_loader">
+                            <div class="ui active inline loader"></div>
+                            <div class="loader_text">Registering...</div>
+                        </div>
+                    </div>
+                    <div class="ui error message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui basic small modal phone_modal">
+    <i class="close icon"></i>
+    <div class="ui center aligned large header">Phone number Authentication</div>
+    <div class="content">
+        <div class="ui middle aligned grid">
+            <div class="column">
+                <form class="ui form" id="phone_form">
+                    <div class="ui stacked segment">
+                        <div id="hidepf">
+                        <div class="field">
+                            <label>Enter Your Phone Number</label>
+                            <div class="ui left icon input">
+                                <i class="right  phone icon"></i>
+                                 <input name="number"  type="number" oninput="phFunction()" id="phone-number">
+                            </div>
+                        </div>
+                        
+                         <div class="ui large teal submit phonesub flat button" id="sign-in-button">Submit</div>
+
+                         </div>
+                         <div  class="verification-code-form">
+                         <div class="field">
+                            <label id="verifyc">Enter verification code</label>
+                            <div class="ui left icon input">
+                                
+                                 <input name="num"  type="number"  id="verification-code">
+                            </div>
+                        </div>
+                        
+                         <div class="ui large teal flat button" id="verifyp">Verify</div>
+                         </div>
+                         
+                        <div class="main_loader" id="signup_loader">
+                            <div class="ui active inline loader"></div>
+                            <div class="loader_text">Verifying...</div>
+                        </div>
+                    </div>
+                    <div class="ui error message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Modal -->
+
+
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+<!--End of doc -->
+
+<script type="text/javascript" src="js/semantic.min.js"></script>
+
+</body>
+</html>

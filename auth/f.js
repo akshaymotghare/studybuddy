@@ -1,0 +1,1 @@
+var $redirect_counter=$("#redirect_counter") if($redirect_counter.length>0){var counter=parseInt($redirect_counter.text()) setInterval(function(){counter>0?(counter-=1,$redirect_counter.text(counter)):window.location="/"},1e3)}

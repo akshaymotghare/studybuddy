@@ -1,0 +1,1179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <!--================================================================================
+  Item Name: Materialize - Material Design Admin Template
+  Version: 4.0
+  Author: PIXINVENT
+  Author URL: https://themeforest.net/user/pixinvent/portfolio
+================================================================================ -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
+    <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
+    <title>Profile Page | Materialize - Material Design Admin Template</title>
+    <!-- Favicons-->
+    <!-- Favicons-->
+    
+    <!-- For Windows Phone -->
+    <!-- CORE CSS-->
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet">
+    <link href="css/newstyle.css" type="text/css" rel="stylesheet">
+    <!-- Custome CSS-->   
+    <link href="css/custom/custom.css" type="text/css" rel="stylesheet">
+    <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+    <link href="vendors/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet">
+    <link href="vendors/flag-icon/css/flag-icon.min.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- End Page Loading -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- START HEADER -->
+    <header id="header" class="page-topbar">
+      <!-- start header nav-->
+      <div class="navbar-fixed">
+        <nav class="navbar-color blue">
+          <div class="nav-wrapper">
+            <ul class="left">
+                    <div class="item"><img src="images/sb_logo.png"  width="120" alt="eGyan" class="ui" /></div>
+
+            </ul>
+            <div class="header-search-wrapper hide-on-med-and-down">
+              <i class="material-icons">search</i>
+              <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Search book by Author or Name" />
+            </div>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="javascript:void(0);" class="waves-effect waves-block waves-light translation-button" data-activates="translation-dropdown">
+                  <span class="flag-icon flag-icon-gb"></span>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen">
+Home                </a>
+              </li>
+          
+              <li>
+                <a id="logout" href="#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse">
+                   Logout
+                </a>
+              </li>
+            </ul>
+            <!-- translation-button -->
+            <ul id="translation-dropdown" class="dropdown-content">
+              <li>
+                <a href="#!" class="grey-text text-darken-1">
+                  <i class="flag-icon flag-icon-gb"></i> English</a>
+              </li>
+              <li>
+                <a href="#!" class="grey-text text-darken-1">
+                  <i class="flag-icon flag-icon-fr"></i> French</a>
+              </li>
+              <li>
+                <a href="#!" class="grey-text text-darken-1">
+                  <i class="flag-icon flag-icon-cn"></i> Chinese</a>
+              </li>
+              <li>
+                <a href="#!" class="grey-text text-darken-1">
+                  <i class="flag-icon flag-icon-de"></i> German</a>
+              </li>
+            </ul>
+            <!-- notifications-dropdown -->
+            <ul id="notifications-dropdown" class="dropdown-content">
+              <li>
+                <h6>NOTIFICATIONS
+                  <span class="new badge">5</span>
+                </h6>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#!" class="grey-text text-darken-2">
+                  <span class="material-icons icon-bg-circle cyan small">add_shopping_cart</span> A new order has been placed!</a>
+                <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">2 hours ago</time>
+              </li>
+              <li>
+                <a href="#!" class="grey-text text-darken-2">
+                  <span class="material-icons icon-bg-circle red small">stars</span> Completed the task</a>
+                <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">3 days ago</time>
+              </li>
+              <li>
+                <a href="#!" class="grey-text text-darken-2">
+                  <span class="material-icons icon-bg-circle teal small">settings</span> Settings updated</a>
+                <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">4 days ago</time>
+              </li>
+              <li>
+                <a href="#!" class="grey-text text-darken-2">
+                  <span class="material-icons icon-bg-circle deep-orange small">today</span> Director meeting started</a>
+                <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">6 days ago</time>
+              </li>
+              <li>
+                <a href="#!" class="grey-text text-darken-2">
+                  <span class="material-icons icon-bg-circle amber small">trending_up</span> Generate monthly report</a>
+                <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">1 week ago</time>
+              </li>
+            </ul>
+            <!-- profile-dropdown -->
+            <ul id="profile-dropdown" class="dropdown-content">
+              <li>
+                <a href="#" class="grey-text text-darken-1">
+                  <i class="material-icons">face</i> Profile</a>
+              </li>
+              <li>
+                <a href="#" class="grey-text text-darken-1">
+                  <i class="material-icons">settings</i> Settings</a>
+              </li>
+              <li>
+                <a href="#" class="grey-text text-darken-1">
+                  <i class="material-icons">live_help</i> Help</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#" class="grey-text text-darken-1">
+                  <i class="material-icons">lock_outline</i> Lock</a>
+              </li>
+              <li>
+                <a href="#" class="grey-text text-darken-1">
+                  <i class="material-icons">keyboard_tab</i> Logout</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- end header nav-->
+    </header>
+    <!-- END HEADER -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- START MAIN -->
+    <div id="main">
+      <!-- START WRAPPER -->
+      <div class="wrapper">
+        <!-- START LEFT SIDEBAR NAV-->
+        <aside id="left-sidebar-nav">
+          <ul id="slide-out" class="side-nav fixed leftside-navigation">
+            <li class="user-details cyan darken-2">
+              <div class="row">
+                <div class="col col s4 m4 l4">
+                  <img src="images/avatar/avatar-7.png" alt="" class="circle responsive-img valign profile-image cyan">
+                </div>
+                <div class="col col s8 m8 l8">
+                 
+                  <a id="dispname" class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown-nav"><i class="mdi-navigation-arrow-drop-down right"></i></a>
+                  <p class="user-roal">User</p>
+                </div>
+              </div>
+            </li>
+            <li class="no-padding">
+              <ul class="collapsible" data-collapsible="accordion">
+                <li class="bold">
+                  <li class="bold">
+                  <a class="collapsible-header waves-effect waves-cyan">
+                    <i class="material-icons">person</i>
+                    <span class="nav-text">Profile</span>
+                  </a>
+                  
+                      </li>
+           <li class="bold">
+                  <a class="collapsible-header waves-effect waves-cyan">
+                    <i class="material-icons">notes</i>
+                    <span class="nav-text">Previous Year Papers</span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li>
+                        <a href="../collapsible-menu/">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span> First Year</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../semi-dark-menu/">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span> Second Year</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../fixed-menu/">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span> Third Year</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../overlay-menu/">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span> Final Year</span>
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                </li>
+
+                  <!--  -->
+                  
+                <li class="bold">
+                  <a class="collapsible-header waves-effect waves-cyan">
+                    <i class="material-icons">note</i>
+                    <span class="nav-text">Notes</span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li>
+                        <a href="../collapsible-menu/">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span> First Year</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../semi-dark-menu/">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span> Second Year</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../fixed-menu/">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span> Third Year</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../overlay-menu/">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span> Final Year</span>
+                        </a>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="bold">
+                  <a class="collapsible-header waves-effect waves-cyan">
+                    <i class="material-icons">pan_tool</i>
+                    <span class="nav-text">Contribute</span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li>
+                        <a href="layout-light.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Upload Papers</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="layout-dark.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Upload Notes</span>
+                        </a>
+                      </li>
+                    </ul>
+
+                      <li class="bold">
+                  <a class="collapsible-header waves-effect waves-cyan">
+                    <i class="material-icons">web</i>
+                    <span class="nav-text">Contact Us</span>
+                  </a>
+                  
+                      </li>
+                
+                     <!--
+                <li class="bold">
+                  <a class="collapsible-header waves-effect waves-cyan">
+                    <i class="material-icons">cast</i>
+                    <span class="nav-text">Cards</span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li>
+                        <a href="cards-basic.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span> Basic</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="cards-advance.html" class="waves-effect waves-cyan">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span class="nav-text">Advance</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="cards-extended.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Extended</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold">
+                  <a href="app-email.html" class="waves-effect waves-cyan">
+                    <i class="material-icons">mail_outline</i>
+                    <span class="nav-text">Mailbox</span>
+                  </a>
+                </li>
+                <li class="bold">
+                  <a href="app-calendar.html" class="waves-effect waves-cyan">
+                    <i class="material-icons">today</i>
+                    <span class="nav-text">Calender</span>
+                  </a>
+                </li>
+                <li class="bold">
+                  <a class="collapsible-header waves-effect waves-cyan">
+                    <i class="material-icons">invert_colors</i>
+                    <span class="nav-text">CSS</span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li>
+                        <a href="css-typography.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Typography</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="css-color.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span class="nav-text">Color</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="css-grid.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span class="nav-text">Grid</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="css-helpers.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span class="nav-text">Helpers</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="css-media.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Media</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="css-pulse.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Pulse</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="css-sass.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Sass</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="css-shadow.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Shadow</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="css-animations.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Animations</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="css-transitions.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Transition</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold">
+                  <a class="collapsible-header  waves-effect waves-cyan">
+                    <i class="material-icons">photo_filter</i>
+                    <span class="nav-text">Basic UI</span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul class="collapsible" data-collapsible="accordion">
+                      <li class="bold">
+                        <a class="collapsible-header  waves-effect waves-cyan">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span class="nav-text">Buttons</span>
+                        </a>
+                        <div class="collapsible-body">
+                          <ul class="collapsible" data-collapsible="accordion">
+                            <li>
+                              <a href="ui-basic-buttons.html">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Basic</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="ui-extended-buttons.html">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Extended</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <a href="ui-icons.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Icons</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="ui-alerts.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Alerts</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="ui-badges.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Badges</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="ui-breadcrumbs.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Breadcrumbs</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="ui-chips.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Chips</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="ui-collections.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Collections</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="ui-navbar.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Navbar</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="ui-pagination.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Pagination</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="ui-preloader.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Preloader</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold">
+                  <a class="collapsible-header waves-effect waves-cyan">
+                    <i class="material-icons">library_add</i>
+                    <span class="nav-text">Previous Year
+
+
+                    </span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li>
+                        <a href="advance-ui-carousel.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Carousel</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="advance-ui-collapsibles.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Collapsible</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="advance-ui-toasts.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Toasts</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="advance-ui-tooltip.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Tooltip</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="advance-ui-dropdown.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Dropdown</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="advance-ui-feature-discovery.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Feature Discovery</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="advanced-ui-media.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Media</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="advanced-ui-modals.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Modals</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="advance-ui-scrollfire.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>ScrollFire</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="advance-ui-scrollspy.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Scrollspy</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="advance-ui-tabs.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Tabs</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="advance-ui-transitions.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Transitions</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="advance-ui-waves.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Waves</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold">
+                  <a class="collapsible-header waves-effect waves-cyan">
+                    <i class="material-icons">add_to_queue</i>
+                    <span class="nav-text">Extra Components</span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li>
+                        <a href="extra-components-range-slider.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Range Slider</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="extra-components-sweetalert.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>SweetAlert</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="extra-components-nestable.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Shortable & Nestable</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="extra-components-translation.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Language Translation</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="extra-components-highlight.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Highlight</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold">
+                  <a class="collapsible-header  waves-effect waves-cyan">
+                    <i class="material-icons">border_all</i>
+                    <span class="nav-text">Tables</span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li>
+                        <a href="table-basic.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Basic Tables</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="table-data.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Data Tables</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="table-jsgrid.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>jsGrid</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="table-editable.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Editable Table</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="table-floatThead.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>FloatThead</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold">
+                  <a class="collapsible-header  waves-effect waves-cyan">
+                    <i class="material-icons">chrome_reader_mode</i>
+                    <span class="nav-text">Forms</span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li>
+                        <a href="form-elements.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Form Elements</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="form-layouts.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Form Layouts</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="form-validation.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Form Validations</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="form-masks.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Form Masks</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="form-file-uploads.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>File Uploads</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold">
+                  <a class="collapsible-header  waves-effect waves-cyan">
+                    <i class="material-icons">pages</i>
+                    <span class="nav-text">Pages</span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li>
+                        <a href="page-contact.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Contact Page</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="page-todo.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>ToDos</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="page-blog-1.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Blog Type 1</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="page-blog-2.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Blog Type 2</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="page-404.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>404</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="page-500.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>500</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="page-blank.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Blank</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold">
+                  <a class="collapsible-header  waves-effect waves-cyan">
+                    <i class="material-icons">add_shopping_cart</i>
+                    <span class="nav-text">eCommers</span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li>
+                        <a href="eCommerce-products-page.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Products Page</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="eCommerce-pricing.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Pricing Table</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="eCommerce-invoice.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Invoice</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold">
+                  <a class="collapsible-header  waves-effect waves-cyan">
+                    <i class="material-icons">perm_media</i>
+                    <span class="nav-text">Medias</span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li>
+                        <a href="media-gallary-page.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Gallery Page</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="media-hover-effects.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Image Hover Effects</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold">
+                  <a class="collapsible-header  waves-effect waves-cyan active">
+                    <i class="material-icons">account_circle</i>
+                    <span class="nav-text">User</span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li class="active">
+                        <a href="user-profile-page.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>User Profile</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="user-login.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Login</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="user-register.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Register</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="user-forgot-password.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Forgot Password</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="user-lock-screen.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Lock Screen</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="bold">
+                  <a class="collapsible-header waves-effect waves-cyan">
+                    <i class="material-icons">pie_chart_outlined</i>
+                    <span class="nav-text">Charts</span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li>
+                        <a href="charts-chartjs.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Chart JS</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="charts-chartist.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Chartist</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="charts-morris.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Morris Charts</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="charts-xcharts.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>xCharts</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="charts-flotcharts.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Flot Charts</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="charts-sparklines.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Sparkline Charts</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+           <!--  <li class="li-hover">
+              <p class="ultra-small margin more-text">MORE</p>
+            </li>
+            <li>
+              <a href="angular-ui.html">
+                <i class="material-icons">verified_user</i>
+                <span class="nav-text">Angular UI</span>
+              </a>
+            </li>
+            <li class="no-padding">
+              <ul class="collapsible" data-collapsible="accordion">
+                <li class="bold">
+                  <a class="collapsible-header  waves-effect waves-cyan">
+                    <i class="material-icons">photo_filter</i>
+                    <span class="nav-text">Menu Levels</span>
+                  </a>
+                  <div class="collapsible-body">
+                    <ul class="collapsible" data-collapsible="accordion">
+                      <li>
+                        <a href="ui-basic-buttons.html">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span>Second level</span>
+                        </a>
+                      </li>
+                      <li class="bold">
+                        <a class="collapsible-header  waves-effect waves-cyan">
+                          <i class="material-icons">keyboard_arrow_right</i>
+                          <span class="nav-text">Second level child</span>
+                        </a>
+                        <div class="collapsible-body">
+                          <ul class="collapsible" data-collapsible="accordion">
+                            <li>
+                              <a href="ui-basic-buttons.html">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Third level</span>
+                              </a>
+                            </li>
+                            <li class="bold">
+                              <a class="collapsible-header  waves-effect waves-cyan">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span class="nav-text">Third level child</span>
+                              </a>
+                              <div class="collapsible-body">
+                                <ul class="collapsible" data-collapsible="accordion">
+                                  <li>
+                                    <a href="ui-basic-buttons.html">
+                                      <i class="material-icons">keyboard_arrow_right</i>
+                                      <span>Forth level</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="ui-extended-buttons.html">
+                                      <i class="material-icons">keyboard_arrow_right</i>
+                                      <span>Forth level</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="changelogs.html">
+                <i class="material-icons">track_changes</i>
+                <span class="nav-text">Changelogs</span>
+              </a>
+            </li>
+            <li>
+              <a href="../documentation" target="_blank">
+                <i class="material-icons">import_contacts</i>
+                <span class="nav-text">Documentation</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://pixinvent.ticksy.com" target="_blank">
+                <i class="material-icons">help_outline</i>
+                <span class="nav-text">Support</span>
+              </a>
+            </li>
+          </ul> -->
+          <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only">
+            <i class="material-icons">menu</i>
+          </a>
+        </aside>
+        <!-- END LEFT SIDEBAR NAV-->
+        <!-- //////////////////////////////////////////////////////////////////////////// -->
+        
+      <!-- END CONTENT -->
+      <!-- //////////////////////////////////////////////////////////////////////////// -->
+       <div class="col s12">
+                  <div class="row">
+                    <div class="col s12 m3">
+                      <div class="card gradient-shadow gradient-45deg-light-blue-cyan border-radius-3">
+                        <div class="card-content center">
+                          <img src="images/b1.jpg" class="width-150 z-depth-5">
+                          <h6 class="white-text lighten-4">test_bookname</h6>
+                          <p class="white-text lighten-4">test_price</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m3">
+                      <div class="card gradient-shadow gradient-45deg-red-pink border-radius-3">
+                        <div class="card-content center">
+                          <img src="images/b1.jpg" class="width-150 border-square z-depth-5">
+                          <h6 class="white-text lighten-4">test_bookname</h6>
+                          <p class="white-text lighten-4">test_price</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m3">
+                      <div class="card gradient-shadow gradient-45deg-amber-amber border-radius-3">
+                        <div class="card-content center">
+                          <img src="images/b1.jpg" class="width-150 border-square z-depth-5">
+                          <h6 class="white-text lighten-4">Understanding Computer Applications</h6>
+                          <p class="white-text lighten-4">test_price</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m3">
+                      <div class="card gradient-shadow gradient-45deg-green-teal border-radius-3">
+                        <div class="card-content center">
+                          <img src="images/b1.jpg" class="width-150 border-square z-depth-5">
+                          <h6 class="white-text lighten-4">Test Book Name</h6>
+                          <p class="white-text lighten-4">test_price</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+ <div class="col s12">
+                  <div class="row">
+                    <div class="col s12 m3">
+                      <div class="card gradient-shadow gradient-45deg-light-blue-cyan border-radius-3">
+                        <div class="card-content center">
+                          <img src="images/b1.jpg" class="width-150 border-square z-depth-5">
+                          <h6 class="white-text lighten-4">test_bookname</h6>
+                          <p class="white-text lighten-4">test_price</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m3">
+                      <div class="card gradient-shadow gradient-45deg-red-pink border-radius-3">
+                        <div class="card-content center">
+                          <img src="images/b1.jpg" class="width-150 border-square z-depth-5">
+                          <h6 class="white-text lighten-4">test_bookname</h6>
+                          <p class="white-text lighten-4">test_price</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m3">
+                      <div class="card gradient-shadow gradient-45deg-amber-amber border-radius-3">
+                        <div class="card-content center">
+                          <img src="images/b1.jpg" class="width-150 border-square z-depth-5">
+                          <h6 class="white-text lighten-4">Understanding Computer Applications</h6>
+                          <p class="white-text lighten-4">test_price</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m3">
+                      <div class="card gradient-shadow gradient-45deg-green-teal border-radius-3">
+                        <div class="card-content center">
+                          <img src="images/b1.jpg" class="width-150 border-square z-depth-5">
+                          <h6 class="white-text lighten-4">Test Book Name</h6>
+                          <p class="white-text lighten-4">test_price</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+ <div class="col s12">
+                  <div class="row">
+                    <div class="col s12 m3">
+                      <div class="card gradient-shadow gradient-45deg-light-blue-cyan border-radius-3">
+                        <div class="card-content center">
+                          <img src="images/b1.jpg" class="width-150 border-square z-depth-5">
+                          <h6 class="white-text lighten-4">test_bookname</h6>
+                          <p class="white-text lighten-4">test_price</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m3">
+                      <div class="card gradient-shadow gradient-45deg-red-pink border-radius-3">
+                        <div class="card-content center">
+                          <img src="images/b1.jpg" class="width-150 border-square z-depth-5">
+                          <h6 class="white-text lighten-4">test_bookname</h6>
+                          <p class="white-text lighten-4">test_price</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m3">
+                      <div class="card gradient-shadow gradient-45deg-amber-amber border-radius-3">
+                        <div class="card-content center">
+                          <img src="images/b1.jpg" class="width-150 border-square z-depth-5">
+                          <h6 class="white-text lighten-4">Understanding Computer Applications</h6>
+                          <p class="white-text lighten-4">test_price</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col s12 m3">
+                      <div class="card gradient-shadow gradient-45deg-green-teal border-radius-3">
+                        <div class="card-content center">
+                          <img src="images/b1.jpg" class="width-150 border-square z-depth-5">
+                          <h6 class="white-text lighten-4">Test Book Name</h6>
+                          <p class="white-text lighten-4">test_price</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+    </div>
+    <!-- END WRAPPER -->
+    </div>
+    <!-- END MAIN -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- START FOOTER -->
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+          <!-- <span>Copyright ©
+            <script type="text/javascript">
+              document.write(new Date().getFullYear());
+            </script> <a class="grey-text text-lighten-2" href="http://themeforest.net/user/pixinvent/portfolio?ref=pixinvent" target="_blank">PIXINVENT</a> All rights reserved.</span>
+          <span class="right hide-on-small-only"> Design and Developed by <a class="grey-text text-lighten-2" href="https://pixinvent.com/">PIXINVENT</a></span> -->
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER -->
+    <!-- ================================================
+    Scripts
+    ================================================ -->
+    <!-- jQuery Library -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!--materialize js-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--scrollbar-->
+<!--     <script type="text/javascript" src="vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+ -->    <!-- sparkline -->
+<!--     <script type="text/javascript" src="vendors/sparkline/jquery.sparkline.min.js"></script>
+ -->    <!-- google map api -->
+    
+
+    <!-- Modal Structure -->
+  <div id="noname" class="modal">
+    <div class="modal-content">
+    <!-- <h4>Please Enter your Name</h4>
+      <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix">Full Name</label> -->
+
+            <div class="row">
+    
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix">Name</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+          <input id="icon_telephone" type="tel" class="validate">
+          <label for="icon_telephone">Phone Number</label>
+          <div class="modal-footer">
+      <button id="namesub" class=" waves-effect waves-green btn-flat">Submit</button>
+    </div>
+         
+        </div>
+      </div>
+    
+  </div>
+        </div>
+          
+    </div>
+    
+  </div>
+  <!-- Modal Structure -->
+
+
+
+    <!--profile page js-->
+    <script type="text/javascript" src="js/scripts/page-profile.js"></script>
+    <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <!--custom-script.js - Add your own theme custom JS-->
+    <script type="text/javascript" src="js/custom-script.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+  </body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
+
+<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      
+
+	<title>Study Buddy</title>
+</head>
+<body>
+
+    
+<nav class="nav">
+    <div class="nav-wrapper blue lighten-1">
+        <a href="/app" class="brand-logo center">Study Buddy</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile " class="right hide-on-med-and-down">
+            <li><a id="homeMenu" href="/">Home</a></li>
+           
+            <li><a id="logout">Logout</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a id="homeMenu" href="/">Home</a></li>
+            
+            
+            <li><a id="logout">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<!--card-->
+
+
+
+<div class="container" >
+ <!-- profile-page-header -->
+
+            <div id="profile-page-header" style="position: relative; overflow: hidden; margin: 0.5rem 0 1rem 0; border-radius: 2px;" class="card">
+                <div style="height: 200px" class="card-image waves-effect waves-block waves-light">
+
+                    <img class="activator" style="border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;" src="images/user-profile-bg.jpg" alt="user background"> 
+ 
+                </div>
+               <h3 id="messages" style="width: 110px;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    left: 30px;
+    cursor: pointer;
+    margin: 0;"></h3>   
+                <figure style="
+    width: 110px;
+    position: absolute;
+    top: 140px;
+    z-index: 1;
+    left: 30px;
+    cursor: pointer;
+    margin: 0;
+" class="card-profile-image">
+                    <img id="photoP"  alt="profile image" class="circle z-depth-2 responsive-img activator">
+                </figure>
+                <div class="card-content">
+                  <div class="row">                    
+                    <div class="col s3 offset-s1">                        
+                        <h4 id="dispname"></h4>
+                        <p id="mailiddisplay" class="medium-small grey-text">Status</p>                        
+                    </div>
+                    <div class="col s3 center-align">
+                   <div style="height: 50px"></div>
+                        <h4 class="card-title grey-text text-darken-4">0</h4>
+                        <p class="medium-small grey-text">Material Submit</p>                        
+                    </div>
+                    <div id="Badge" class=" stoppable col s3 center-align">
+                     <canvas style="display: none" width="100" height="100"></canvas>
+                        <img id="ubadge" src="https://firebasestorage.googleapis.com/v0/b/egyan-27220.appspot.com/o/Member.gif?alt=media&token=a5e035a3-53cd-471a-b977-3352735cc98f">
+                        <p class="medium-small grey-text">Your Badges</p>                        
+                    </div>                    
+                                        
+                   
+                  </div>
+                </div>
+                <div class="card-reveal">
+                    <p>
+                      <span class="card-title grey-text text-darken-4"> <h4 id="dispname"></h4><i class="mdi-navigation-close right"></i></span>
+                      <span><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> Project Manager</span>
+                    </p>
+
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    
+                    <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> +1 (612) 222 8989</p>
+                    <p><i class="mdi-communication-email cyan-text text-darken-2"></i> mail@domain.com</p>
+                    <p><i class="mdi-social-cake cyan-text text-darken-2"></i> 18th June 1990</p>
+                    <p><i class="mdi-device-airplanemode-on cyan-text text-darken-2"></i> BAR - AUS</p>
+                </div>
+            </div>
+            <!--
+             <div id="card-alerts" class="card green lighten-5">
+                      <div class="card-content green-text">
+                      <a onclick="hidemsg()" href="#c"><i class="material-icons right">close</i></a>
+                      <h5 id="messageT"></h5>
+                        <p id="message"></p>
+                      </div>
+                      
+                        
+                      
+                    </div>
+             profile-page-header -->
+
+
+ <!-- Modal Structure -->
+  <div id="noname" class="modal">
+    <div class="modal-content">
+    <h4>Please Enter your Name</h4>
+      <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate">
+          <label for="icon_prefix">Full Name</label>
+        </div>
+          
+    </div>
+    <div class="modal-footer">
+      <button id="namesub" class=" waves-effect waves-green btn-flat">Submit</button>
+    </div>
+  </div>
+  <!-- Modal Structure -->
+  
+
+<!--insert doc-->
+  <div  class="fixed-action-btn toolbar">
+    <a id="menu" class="btn-floating btn-large red" onclick="okb()">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li class="waves-effect waves-light"><a id="booksend" href="#!">Get Admin Badge<i class="material-icons">verified_user</i></a></li>
+      <li class="waves-effect waves-light"><a id="booksend" href="uploadP.html"> Upload question papers<i class="material-icons">publish</i></a></li>
+      <li class="waves-effect waves-light"><a id="booksend" href="#!">Send Books Links<i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
+ 
+<!---->
+
+<!-- Element Showed -->
+
+
+
+  <!-- Tap Target Structure -->
+  <div class="tap-target" data-activates="menu">
+    <div class="tap-target-content">
+      <h5>Submit Study Materials</h5>
+      <ul>
+        <li>Submit Question Papers,Notes,Books etc</li>
+        <li>Once verified by Subject admin will be published forever</li>
+      </ul>
+    </div>
+  </div>
+
+ 
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script> 
+
+</body>
+</html>
